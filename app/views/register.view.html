@@ -1,0 +1,58 @@
+<div layout="row" layout-align="center center">
+
+  <div class="login">
+    <h1>Angular Material Design Form</h1>
+    <h3>Demo Project</h3>
+      <form name="clientLogin">
+        <md-input-container>
+          <input ng-model="user.firstname" name="firstName" type="text" placeholder="FirstName" ng-required="true">
+          <div ng-messages="clientLogin.userName.$error">
+            <div ng-message="required">Your full name is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <input ng-model="user.lastname" name="lastName" type="text" placeholder="LastName" ng-required="true">
+          <div ng-messages="clientLogin.userName.$error">
+            <div ng-message="required">Your full name is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <input ng-model="user.email" name="email" type="text" placeholder="Email" ng-required="true">
+          <div ng-messages="clientLogin.email.$error">
+            <div ng-message="required">Your Email name is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container>
+          <input ng-model="user.confirm_email" name="ConfirmEmail" type="text" placeholder="ConfirmEmail" ng-required="true">
+          <div ng-messages="clientLogin.email.$error">
+            <div ng-message="required">Confirm Email name is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container md-no-float>
+          <!-- Use floating placeholder instead of label -->
+          <input ng-model="user.password" type="password" placeholder="Password" ng-required="true" name="userPassword">
+          <div ng-messages="clientLogin.userPassword.$error">
+            <div ng-message="required">Your password is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container md-no-float>
+          <!-- Use floating placeholder instead of label -->
+          <input ng-model="user.confirm_password" type="password" placeholder="ConfirmPassword" ng-required="true" name="userPassword">
+          <div ng-messages="clientLogin.userPassword.$error">
+            <div ng-message="required">Confirm password is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-button class="md-raised md-primary" ng-click="DoRegister($event)">Register</md-button>
+        <md-button class="md-primary" ng-href="/#/login">Login</md-button>
+      </form>
+    <footer>
+      <a href="http://www.material-angularjs.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/320px-AngularJS_logo.svg.png"></a>
+      <p>You Gotta Love <a href="http://www.material-angularjs.org/" target="_blank">Angular Material</a></p>
+    </footer>
+
+  </div>
+
+
+</div>

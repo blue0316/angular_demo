@@ -1,0 +1,34 @@
+<div layout="row" layout-align="center center">
+
+  <div class="login">
+    <h1>Angular Material Design Form</h1>
+    <h3>Demo Project</h3>
+      <form name="clientLogin">
+        <md-input-container>
+          <md-icon md-svg-src="assets/img/icons/ic_person_24px.svg" class="name"></md-icon>
+          <input ng-model="user.name" name="userName" type="text" placeholder="Name" ng-required="true">
+          <div ng-messages="clientLogin.userName.$error">
+            <div ng-message="required">Your full name is required.</div>
+          </div>
+        </md-input-container>
+        <md-input-container md-no-float>
+          <!-- Use floating placeholder instead of label -->
+          <input ng-model="user.password" type="text" placeholder="Password" ng-required="true" name="userPassword">
+          <div ng-messages="clientLogin.userPassword.$error">
+            <div ng-message="required">Your password is required.</div>
+          </div>
+        </md-input-container>
+
+        <md-button class="md-raised md-primary" ng-click="DoLogin($event)">Login</md-button>
+        <md-button class="md-primary" ng-href="/#/register">Register</md-button>
+
+      </form>
+    <footer>
+      <a href="http://www.material-angularjs.org/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/320px-AngularJS_logo.svg.png"></a>
+      <p> <a href="http://www.material-angularjs.org/" target="_blank">Angular Material</a></p>
+    </footer>
+
+  </div>
+
+
+</div>
